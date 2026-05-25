@@ -1,13 +1,270 @@
-body {
+/* ===================================================
+   GREENWOOD ACADEMY — GLOBAL STYLES
+   Color Palette: Light White, Brown, Sandal
+   =================================================== */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  /* Primary Colors */
+  --color-brown-deep: #4A2C17;
+  --color-brown: #6B4226;
+  --color-brown-medium: #8B5E3C;
+  --color-brown-light: #A0714F;
+  
+  /* Sandal / Warm Tones */
+  --color-sandal: #D2A679;
+  --color-sandal-light: #E8C9A0;
+  --color-sandal-pale: #F0DCC4;
+  
+  /* White / Cream Tones */
+  --color-cream: #FAF3EB;
+  --color-cream-light: #FDF8F2;
+  --color-white: #FFFFFF;
+  --color-off-white: #F5EDE3;
+  
+  /* Accent & Utility */
+  --color-gold: #C9A04E;
+  --color-gold-light: #E8D5A0;
+  --color-text-dark: #2C1810;
+  --color-text-medium: #5A3E2B;
+  --color-text-light: #8B7355;
+  --color-text-on-dark: #FAF3EB;
+  
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #4A2C17 0%, #6B4226 30%, #8B5E3C 60%, #D2A679 100%);
+  --gradient-warm: linear-gradient(135deg, #D2A679 0%, #E8C9A0 50%, #FAF3EB 100%);
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #FDF8F2 50%, #F0DCC4 100%);
+  --gradient-accent: linear-gradient(135deg, #C9A04E 0%, #D2A679 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(74, 44, 23, 0.85) 0%, rgba(107, 66, 38, 0.6) 50%, rgba(210, 166, 121, 0.3) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(74, 44, 23, 0.08);
+  --shadow-md: 0 4px 20px rgba(74, 44, 23, 0.12);
+  --shadow-lg: 0 8px 40px rgba(74, 44, 23, 0.16);
+  --shadow-xl: 0 16px 60px rgba(74, 44, 23, 0.2);
+  --shadow-glow: 0 0 30px rgba(210, 166, 121, 0.3);
+  
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-width: 1200px;
+  --border-radius: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 32px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-cream-light);
+  line-height: 1.7;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+}
+
+/* ---------- Utility Classes ---------- */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: var(--section-padding);
+}
+
+/* ---------- Section Header ---------- */
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: var(--gradient-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-brown-deep);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-title span {
+  color: var(--color-brown-medium);
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ---------- Scrollbar Styling ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sandal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brown-light);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--color-sandal);
+  color: var(--color-white);
+}
+
+/* ---------- Keyframe Animations ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(210, 166, 121, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(210, 166, 121, 0.5); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
 }

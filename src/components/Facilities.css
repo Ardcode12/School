@@ -1,0 +1,208 @@
+/* ===== FACILITIES SECTION ===== */
+.facilities {
+  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.facilities__bg-accent {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.facilities__bg-accent--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--color-sandal-pale) 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+  opacity: 0.4;
+}
+
+.facilities__bg-accent--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-cream) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+  opacity: 0.3;
+}
+
+/* Grid */
+.facilities__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Facility Card */
+.facility-card {
+  position: relative;
+  background: var(--color-cream-light);
+  border: 1px solid rgba(210, 166, 121, 0.12);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.facility-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.facility-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-sandal);
+  background: var(--color-white);
+}
+
+/* Card Glow */
+.facility-card__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.facility-card:hover .facility-card__glow {
+  opacity: 1;
+}
+
+/* Card Image */
+.facility-card__image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.facility-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.facility-card:hover .facility-card__image img {
+  transform: scale(1.08);
+}
+
+/* Card Body */
+.facility-card__body {
+  padding: 24px 24px 28px;
+}
+
+/* Header */
+.facility-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.facility-card__number {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--color-sandal);
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+/* Content */
+.facility-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-brown-deep);
+  transition: color var(--transition-base);
+}
+
+.facility-card:hover .facility-card__title {
+  color: var(--color-brown);
+}
+
+.facility-card__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Features */
+.facility-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.facility-card__feature {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  background: var(--color-white);
+  border: 1px solid rgba(210, 166, 121, 0.15);
+  border-radius: 50px;
+  color: var(--color-text-medium);
+  letter-spacing: 0.3px;
+  transition: all var(--transition-base);
+}
+
+.facility-card:hover .facility-card__feature {
+  background: var(--color-sandal-pale);
+  border-color: var(--color-sandal-light);
+  color: var(--color-brown);
+}
+
+/* Footer */
+.facility-card__footer {
+  padding-top: 14px;
+  border-top: 1px solid rgba(210, 166, 121, 0.1);
+}
+
+.facility-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-brown-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.facility-card__link svg {
+  transition: transform var(--transition-base);
+}
+
+.facility-card:hover .facility-card__link {
+  color: var(--color-brown);
+}
+
+.facility-card:hover .facility-card__link svg {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .facilities__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .facilities__grid {
+    grid-template-columns: 1fr;
+  }
+}
