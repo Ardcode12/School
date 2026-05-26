@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import { GiBookshelf } from 'react-icons/gi';
+import { LuBookOpen } from 'react-icons/lu';
 import './Facilities.css';
 
 const facilitiesData = [
@@ -9,56 +9,56 @@ const facilitiesData = [
     image: '/library.png',
     description: 'A 10,000+ collection of books, e-resources, and digital archives. Our library features quiet study zones, reading lounges, and an AI-powered recommendation system.',
     features: ['10,000+ Books', 'E-Library Access', 'Reading Lounges'],
-    color: '#8B5E3C'
+    color: '#3E8C63'
   },
   {
     title: 'Science Laboratories',
     image: '/science-lab.png',
     description: 'Fully equipped Physics, Chemistry, and Biology labs with modern instruments, safety systems, and dedicated research corners for advanced experiments.',
     features: ['Physics Lab', 'Chemistry Lab', 'Biology Lab'],
-    color: '#6B4226'
+    color: '#2D6B4A'
   },
   {
     title: 'Computer Labs',
     image: '/computer-lab.png',
     description: 'High-performance computing labs with 200+ systems, high-speed internet, 3D printers, and robotics stations for coding, AI, and tech exploration.',
     features: ['200+ Systems', 'Robotics Station', '3D Printing'],
-    color: '#A0714F'
+    color: '#5AAD7B'
   },
   {
     title: 'Sports Complex',
     image: '/sports-field.png',
     description: 'An expansive sports facility with cricket grounds, football fields, basketball courts, swimming pool, and an indoor badminton arena.',
     features: ['Swimming Pool', 'Cricket Ground', 'Indoor Courts'],
-    color: '#C9A04E'
+    color: '#3DAA6D'
   },
   {
     title: 'Music & Dance Studio',
     image: '/music-room.png',
     description: 'Acoustically treated music rooms with instruments for classical, western, and contemporary music. Spacious dance floors with mirrors and sound systems.',
     features: ['Recording Studio', 'Dance Floor', 'Instruments'],
-    color: '#D2A679'
+    color: '#7CC9A0'
   },
   {
     title: 'Art & Design Studio',
     image: '/art-studio.png',
     description: 'Creative spaces equipped with professional-grade art supplies, pottery wheels, and digital design workstations for budding artists and designers.',
     features: ['Art Supplies', 'Pottery Studio', 'Digital Design'],
-    color: '#8B5E3C'
+    color: '#3E8C63'
   },
   {
     title: 'Athletics Track',
     image: '/sports-field.png',
     description: 'A 400-meter synthetic athletic track with long jump pits, shot put areas, and a fully equipped gymnasium for fitness and competitive sports training.',
     features: ['400m Track', 'Gymnasium', 'Training Zone'],
-    color: '#6B4226'
+    color: '#2D6B4A'
   },
   {
     title: 'Innovation Hub',
     image: '/computer-lab.png',
     description: 'A dedicated makerspace for STEM projects, featuring robotics kits, IoT devices, and tools for prototyping and building real-world solutions.',
     features: ['Makerspace', 'IoT Lab', 'Prototyping'],
-    color: '#A0714F'
+    color: '#5AAD7B'
   }
 ];
 
@@ -93,7 +93,7 @@ const Facilities = () => {
       <div className="container">
         <div className="section-header">
           <div className="section-badge">
-            <GiBookshelf />
+            <LuBookOpen />
             Our Facilities
           </div>
           <h2 className="section-title">

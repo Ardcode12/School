@@ -1,61 +1,61 @@
 /* ===================================================
    GREENWOOD ACADEMY — GLOBAL STYLES
-   Color Palette: Light White, Brown, Sandal
+   Color Palette: Pale Green, Sage, Mint
    =================================================== */
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Primary Colors */
-  --color-brown-deep: #4A2C17;
-  --color-brown: #6B4226;
-  --color-brown-medium: #8B5E3C;
-  --color-brown-light: #A0714F;
-  
-  /* Sandal / Warm Tones */
-  --color-sandal: #D2A679;
-  --color-sandal-light: #E8C9A0;
-  --color-sandal-pale: #F0DCC4;
-  
-  /* White / Cream Tones */
-  --color-cream: #FAF3EB;
-  --color-cream-light: #FDF8F2;
+  /* Primary Greens */
+  --color-brown-deep: #1A3A2A;
+  --color-brown: #2D6B4A;
+  --color-brown-medium: #3E8C63;
+  --color-brown-light: #5AAD7B;
+
+  /* Sage / Mint Tones */
+  --color-sandal: #7CC9A0;
+  --color-sandal-light: #A8E0C0;
+  --color-sandal-pale: #D4F0E0;
+
+  /* White / Mint Tones */
+  --color-cream: #E8F5ED;
+  --color-cream-light: #F2FAF5;
   --color-white: #FFFFFF;
-  --color-off-white: #F5EDE3;
-  
+  --color-off-white: #ECF7F0;
+
   /* Accent & Utility */
-  --color-gold: #C9A04E;
-  --color-gold-light: #E8D5A0;
-  --color-text-dark: #2C1810;
-  --color-text-medium: #5A3E2B;
-  --color-text-light: #8B7355;
-  --color-text-on-dark: #FAF3EB;
-  
+  --color-gold: #3DAA6D;
+  --color-gold-light: #8CD4A8;
+  --color-text-dark: #152E22;
+  --color-text-medium: #2E5A40;
+  --color-text-light: #5A8B6E;
+  --color-text-on-dark: #E8F5ED;
+
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #4A2C17 0%, #6B4226 30%, #8B5E3C 60%, #D2A679 100%);
-  --gradient-warm: linear-gradient(135deg, #D2A679 0%, #E8C9A0 50%, #FAF3EB 100%);
-  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #FDF8F2 50%, #F0DCC4 100%);
-  --gradient-accent: linear-gradient(135deg, #C9A04E 0%, #D2A679 100%);
-  --gradient-overlay: linear-gradient(180deg, rgba(74, 44, 23, 0.85) 0%, rgba(107, 66, 38, 0.6) 50%, rgba(210, 166, 121, 0.3) 100%);
-  
+  --gradient-hero: linear-gradient(135deg, #1A3A2A 0%, #2D6B4A 30%, #3E8C63 60%, #7CC9A0 100%);
+  --gradient-warm: linear-gradient(135deg, #7CC9A0 0%, #A8E0C0 50%, #E8F5ED 100%);
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F2FAF5 50%, #D4F0E0 100%);
+  --gradient-accent: linear-gradient(135deg, #3DAA6D 0%, #7CC9A0 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(26, 58, 42, 0.85) 0%, rgba(45, 107, 74, 0.6) 50%, rgba(124, 201, 160, 0.3) 100%);
+
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(74, 44, 23, 0.08);
-  --shadow-md: 0 4px 20px rgba(74, 44, 23, 0.12);
-  --shadow-lg: 0 8px 40px rgba(74, 44, 23, 0.16);
-  --shadow-xl: 0 16px 60px rgba(74, 44, 23, 0.2);
-  --shadow-glow: 0 0 30px rgba(210, 166, 121, 0.3);
-  
+  --shadow-sm: 0 2px 8px rgba(26, 58, 42, 0.08);
+  --shadow-md: 0 4px 20px rgba(26, 58, 42, 0.10), 0 1px 3px rgba(26, 58, 42, 0.06);
+  --shadow-lg: 0 8px 40px rgba(26, 58, 42, 0.12), 0 2px 8px rgba(26, 58, 42, 0.06);
+  --shadow-xl: 0 16px 60px rgba(26, 58, 42, 0.15), 0 4px 12px rgba(26, 58, 42, 0.08);
+  --shadow-glow: 0 0 30px rgba(124, 201, 160, 0.3);
+
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
-  
+
   /* Spacing */
   --section-padding: 100px 0;
   --container-width: 1200px;
   --border-radius: 16px;
   --border-radius-lg: 24px;
   --border-radius-xl: 32px;
-  
+
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -139,6 +139,7 @@ button {
   text-transform: uppercase;
   border-radius: 50px;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(61, 170, 109, 0.3);
 }
 
 .section-title {
@@ -200,8 +201,8 @@ button {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(210, 166, 121, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(210, 166, 121, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 201, 160, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(124, 201, 160, 0.5); }
 }
 
 @keyframes rotate-slow {
@@ -254,16 +255,28 @@ button {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes soft-bounce {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   :root {
     --section-padding: 60px 0;
   }
-  
+
   .container {
     padding: 0 16px;
   }
-  
+
   .section-header {
     margin-bottom: 40px;
   }

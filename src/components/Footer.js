@@ -1,5 +1,5 @@
 import React from 'react';
-import { GiGraduateCap } from 'react-icons/gi';
+import { LuGraduationCap } from 'react-icons/lu';
 import { 
   FiMapPin, FiPhone, FiMail, FiClock,
   FiFacebook, FiTwitter, FiInstagram, FiYoutube, FiLinkedin 
@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="footer__brand">
               <div className="footer__logo">
                 <div className="footer__logo-icon">
-                  <GiGraduateCap />
+                  <LuGraduationCap />
                 </div>
                 <div className="footer__logo-text">
                   <span className="footer__logo-name">Greenwood</span>

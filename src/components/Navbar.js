@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { GiGraduateCap } from 'react-icons/gi';
+import { LuGraduationCap } from 'react-icons/lu';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="navbar__container container">
         <a href="#home" className="navbar__logo" onClick={(e) => scrollToSection(e, '#home')}>
           <div className="navbar__logo-icon">
-            <GiGraduateCap />
+            <LuGraduationCap />
           </div>
           <div className="navbar__logo-text">
             <span className="navbar__logo-name">Greenwood</span>

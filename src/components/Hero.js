@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiArrowDown, FiPlay } from 'react-icons/fi';
-import { GiBookshelf, GiMicroscope, GiRunningShoe } from 'react-icons/gi';
+import { LuBookOpen, LuFlaskConical, LuTrophy } from 'react-icons/lu';
 import './Hero.css';
 
 const Hero = () => {
@@ -67,15 +67,15 @@ const Hero = () => {
           {/* Feature pills */}
           <div className="hero__features">
             <div className="hero__feature">
-              <GiBookshelf className="hero__feature-icon" />
+              <LuBookOpen className="hero__feature-icon" />
               <span>Digital Library</span>
             </div>
             <div className="hero__feature">
-              <GiMicroscope className="hero__feature-icon" />
+              <LuFlaskConical className="hero__feature-icon" />
               <span>Smart Labs</span>
             </div>
             <div className="hero__feature">
-              <GiRunningShoe className="hero__feature-icon" />
+              <LuTrophy className="hero__feature-icon" />
               <span>Sports Complex</span>
             </div>
           </div>
